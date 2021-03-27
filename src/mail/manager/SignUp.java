@@ -14,8 +14,8 @@ public class SignUp extends javax.swing.JFrame {
     /**
      * Creates new form SignUp
      */
-    int x,y;
-    
+    int x, y;
+
     public SignUp() {
         initComponents();
     }
@@ -52,12 +52,13 @@ public class SignUp extends javax.swing.JFrame {
         button2 = new java.awt.Button();
         jLabel11 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
-        panel1 = new java.awt.Panel();
+        title_panel = new java.awt.Panel();
         label1 = new java.awt.Label();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setFocusCycleRoot(false);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -352,15 +353,15 @@ public class SignUp extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        panel1.setBackground(new java.awt.Color(153, 153, 153));
-        panel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        title_panel.setBackground(new java.awt.Color(237, 240, 247));
+        title_panel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                panel1MousePressed(evt);
+                title_panelMousePressed(evt);
             }
         });
-        panel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        title_panel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                panel1MouseDragged(evt);
+                title_panelMouseDragged(evt);
             }
         });
 
@@ -376,16 +377,16 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout title_panelLayout = new javax.swing.GroupLayout(title_panel);
+        title_panel.setLayout(title_panelLayout);
+        title_panelLayout.setHorizontalGroup(
+            title_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, title_panelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        title_panelLayout.setVerticalGroup(
+            title_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
@@ -393,19 +394,20 @@ public class SignUp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(title_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(title_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -426,10 +428,10 @@ public class SignUp extends javax.swing.JFrame {
 
     private void SignIn_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_btnActionPerformed
         // TODO add your handling code here:
-           SignIn obj = new SignIn();
+        SignIn obj = new SignIn();
         obj.setVisible(true);
         this.setVisible(false);
-       
+
     }//GEN-LAST:event_SignIn_btnActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
@@ -441,47 +443,48 @@ public class SignUp extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel10MouseClicked
 
-    private void panel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel1MousePressed
+    private void title_panelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title_panelMousePressed
         // TODO add your handling code here:
         x = evt.getX();
         y = evt.getY();
-    }//GEN-LAST:event_panel1MousePressed
+    }//GEN-LAST:event_title_panelMousePressed
 
-    private void panel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel1MouseDragged
+    private void title_panelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title_panelMouseDragged
         // TODO add your handling code here:
         int xx = evt.getXOnScreen();
         int yy = evt.getYOnScreen();
-        this.setLocation(xx-x, yy-y);
-    }//GEN-LAST:event_panel1MouseDragged
+        this.setLocation(xx - x, yy - y);
+    }//GEN-LAST:event_title_panelMouseDragged
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-           new SignIn_DarkMode().setVisible(true);
+        new DarkMode_SignUp().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void userKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userKeyTyped
         // TODO add your handling code here:
-       
-   
+
+
     }//GEN-LAST:event_userKeyTyped
 
     private void userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseClicked
         // TODO add your handling code here:
-         if("Username".equals(user.getText())){
+        if ("Username".equals(user.getText())) {
             user.setText("");
         }
     }//GEN-LAST:event_userMouseClicked
 
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
         // TODO add your handling code here:
-         if("Email".equals(email.getText())){
+        if ("Email".equals(email.getText())) {
             email.setText("");
         }
     }//GEN-LAST:event_emailMouseClicked
 
     private void passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordMouseClicked
         // TODO add your handling code here:
-            if("Password".equals(password.getText())){
+        if ("Password".equals(password.getText())) {
             password.setText("");
         }
     }//GEN-LAST:event_passwordMouseClicked
@@ -545,8 +548,8 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private java.awt.Label label1;
-    private java.awt.Panel panel1;
     private javax.swing.JPasswordField password;
+    private java.awt.Panel title_panel;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
