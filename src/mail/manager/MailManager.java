@@ -32,7 +32,7 @@ public class MailManager {
 
         
             try {
-                    music("C:\\Users\\Haier\\Documents\\NetBeansProjects\\fas\\Music\\145.wav");
+                    music("C:\\Users\\Haier\\Documents\\NetBeansProjects\\fas\\Music\\12345.wav");
                 } catch (IOException ex) {
                     Logger.getLogger(StartPage.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -40,7 +40,7 @@ public class MailManager {
         
         try {
             for (int i = 1; i <= 100; i++) {
-                Thread.sleep(50);
+                Thread.sleep(40);
                 obj1.jLabel5.setText(Integer.toString(i) + "%");
                 obj1.jProgressBar1.setValue(i);
                 if (i == 100) {
@@ -51,7 +51,6 @@ public class MailManager {
         } catch (Exception e) {
             //  Block of code to handle errors
         }
-
     }
 
     

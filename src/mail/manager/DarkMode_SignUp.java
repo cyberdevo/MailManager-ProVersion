@@ -79,7 +79,7 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
 
         SignIn_btn.setBackground(new java.awt.Color(255, 255, 255));
         SignIn_btn.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        SignIn_btn.setForeground(new java.awt.Color(0, 153, 153));
+        SignIn_btn.setForeground(new java.awt.Color(20, 20, 25));
         SignIn_btn.setLabel("Sign In");
         SignIn_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,18 +90,18 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(34, 36, 41));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Create Accocunt");
         jLabel4.setAlignmentX(0.5F);
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 153));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("OR");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setBackground(new java.awt.Color(34, 36, 41));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/g.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setMaximumSize(new java.awt.Dimension(20, 20));
@@ -112,22 +112,22 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setBackground(new java.awt.Color(34, 36, 41));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/fb.png"))); // NOI18N
         jButton3.setBorder(null);
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(34, 36, 41));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/twitter.png"))); // NOI18N
         jButton2.setBorder(null);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel8.setText("Email");
 
         email.setBackground(new java.awt.Color(34, 36, 41));
-        email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        email.setForeground(new java.awt.Color(102, 102, 102));
+        email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        email.setForeground(new java.awt.Color(153, 153, 153));
         email.setText("Email");
         email.setBorder(null);
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,12 +145,13 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/unlock_18px.png"))); // NOI18N
         jLabel6.setText("Password");
 
         password.setBackground(new java.awt.Color(34, 36, 41));
-        password.setForeground(new java.awt.Color(102, 102, 102));
+        password.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        password.setForeground(new java.awt.Color(153, 153, 153));
         password.setText("Password");
         password.setBorder(null);
         password.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,8 +169,8 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
 
         user.setBackground(new java.awt.Color(34, 36, 41));
-        user.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        user.setForeground(new java.awt.Color(102, 102, 102));
+        user.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        user.setForeground(new java.awt.Color(153, 153, 153));
         user.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         user.setText("Username");
         user.setToolTipText("");
@@ -192,7 +193,7 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel9.setText("Name");

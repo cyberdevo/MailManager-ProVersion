@@ -5,6 +5,16 @@
  */
 package mail.manager;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Random;
+import java.util.Set;
+import java.util.LinkedHashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Studio 7
@@ -61,7 +71,6 @@ public class SignUp extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusCycleRoot(false);
         setUndecorated(true);
-        setOpacity(0.5F);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -354,7 +363,7 @@ public class SignUp extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        title_panel.setBackground(new java.awt.Color(237, 240, 247));
+        title_panel.setBackground(new java.awt.Color(255, 255, 255));
         title_panel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 title_panelMousePressed(evt);
@@ -436,7 +445,28 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_SignIn_btnActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-        // TODO add your handling code here:
+
+        try {
+            Connection Con_Db = MailManager.Db_MailsManager();
+            String query = "insert into DataSignUp(Username,Password,Email)values(?,?,?)";
+            PreparedStatement ps = Con_Db.prepareStatement(query);
+      
+           
+            ps.setString(1, user.getText());
+            ps.setString(2, password.getText());
+            ps.setString(3, email.getText());
+            ps.executeUpdate();
+
+            user.setText("");
+            password.setText("");
+            email.setText("");
+            
+            JOptionPane.showMessageDialog(null, "DataInsertedSuccessFully");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_button2ActionPerformed
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
