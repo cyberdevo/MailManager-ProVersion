@@ -6,8 +6,12 @@
 package mail.manager;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import static mail.manager.StartPage.music;
 
 /**
@@ -15,6 +19,8 @@ import static mail.manager.StartPage.music;
  * @author Studio 7
  */
 public class MailManager {
+    
+    static Connection db_con=null;
 
     /**
      * @param args the command line arguments
@@ -48,4 +54,18 @@ public class MailManager {
 
     }
 
+    
+    public static Connection Db_MailsManager() throws SQLException{
+        
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+             String con_MM="jdbc:sqlserver://localhost:1433; databaseName=MailUserData;user=muhammadhusnain;password=101325";
+             db_con = DriverManager.getConnection(con_MM);
+             JOptionPane.showMessageDialog(null, "Connection Esteblished");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MailManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return db_con;
+    }
+    
 }
