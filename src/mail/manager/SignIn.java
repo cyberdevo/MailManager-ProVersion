@@ -418,39 +418,23 @@ public class SignIn extends javax.swing.JFrame {
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
 
         try {
-            String UserName = user_signIn.getText();
-            String PassWord = pass_signIn.getText();
+            String user = user_signIn.getText();
+            String pass_field = pass_signIn.getText();
             Connection con = MailManager.Db_MailsManager();
             String query = "select * from DataSignUp where username=?";
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(1,UserName);
+            ps.setString(1,user);
             ResultSet rs = ps.executeQuery();
             
             if(rs.next()) {
                 String pass = rs.getString("password");
-                 JOptionPane.showMessageDialog(null,"YOu are Registered");
-                if (PassWord.equals(pass)) {
-                    JOptionPane.showMessageDialog(null,"YOu are Registered");
+                 JOptionPane.showMessageDialog(null,"Welcome ! You are autherized User");
+                if (pass_field.equals(pass)) {
+                    JOptionPane.showMessageDialog(null,"You are Registered");
                 }
-
             }
 //            loader.show();
 //            jPanel2.hide();
-//            PreparedStatement ps = con.prepareStatement(query);
-
-//            ps.setString(1, user_signIn.getText());
-//            ps.setString(2, pass_signIn.getText());
-//            ps.setString(3, pass_signIn.getText());
-//            System.out.println();
-//            ResultSet rs = ps.executeQuery();
-//            if (rs.next()) {
-//                user_signIn.setText(rs.getString("username"));
-//                pass_signIn.setText(rs.getString("password"));
-//            }
-        } catch (SQLException ex) {
-            Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
 
     }//GEN-LAST:event_button2ActionPerformed
 
