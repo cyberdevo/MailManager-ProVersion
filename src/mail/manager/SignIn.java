@@ -436,6 +436,11 @@ public class SignIn extends javax.swing.JFrame {
 //            loader.show();
 //            jPanel2.hide();
 
+        } catch (SQLException ex) {
+            Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
     }//GEN-LAST:event_button2ActionPerformed
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
