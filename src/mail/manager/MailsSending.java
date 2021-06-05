@@ -43,8 +43,8 @@ public class MailsSending {
         properties.put("mail.smtp.port", "587");
 
 //        String myAcountMail = "technicaldemonstrations@gmail.com";
-        String myPasswordMail = "wordpress12";
-
+        
+// Enter the Password here
         Session session = Session.getInstance(properties, new Authenticator() {
 
             @Override
