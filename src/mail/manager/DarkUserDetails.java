@@ -27,7 +27,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author Studio 7
  */
-public class UserDetails extends javax.swing.JFrame {
+public class DarkUserDetails extends javax.swing.JFrame {
 
     byte[] person_image = null;
     String filename = null;
@@ -35,7 +35,7 @@ public class UserDetails extends javax.swing.JFrame {
     /**
      * Creates new form UserDetails
      */
-    public UserDetails() {
+    public DarkUserDetails() {
         initComponents();
     }
 
@@ -54,6 +54,8 @@ public class UserDetails extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         searchhere = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        change_pass = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         prof = new javax.swing.JTextField();
@@ -67,19 +69,18 @@ public class UserDetails extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        id = new javax.swing.JTextField();
+        help = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        change_pass = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1035, 625));
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(20, 20, 25));
+        jPanel2.setToolTipText("");
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jPanel2MouseDragged(evt);
@@ -103,7 +104,7 @@ public class UserDetails extends javax.swing.JFrame {
         jLabel1.setText("User Details");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 150, 40));
 
-        jRadioButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jRadioButton1.setBackground(new java.awt.Color(20, 20, 25));
         jRadioButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Dark ");
@@ -116,9 +117,9 @@ public class UserDetails extends javax.swing.JFrame {
         });
         jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 10, -1, -1));
 
-        searchhere.setBackground(new java.awt.Color(204, 204, 204));
+        searchhere.setBackground(new java.awt.Color(20, 20, 25));
         searchhere.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        searchhere.setForeground(new java.awt.Color(0, 153, 153));
+        searchhere.setForeground(new java.awt.Color(255, 255, 255));
         searchhere.setText("Search ID here");
         searchhere.setBorder(null);
         searchhere.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -131,19 +132,38 @@ public class UserDetails extends javax.swing.JFrame {
                 searchhereActionPerformed(evt);
             }
         });
-        jPanel2.add(searchhere, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 203, -1));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, 203, 11));
+        jPanel2.add(searchhere, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 180, -1));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, 180, 11));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/search_20px_1.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 110, -1, -1));
+
+        change_pass.setBackground(new java.awt.Color(34, 36, 41));
+        change_pass.setForeground(java.awt.Color.white);
+        change_pass.setText("Change Password");
+        change_pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                change_passActionPerformed(evt);
+            }
+        });
+        jPanel2.add(change_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 44));
+
+        jPanel1.setBackground(new java.awt.Color(34, 36, 41));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel9.setForeground(java.awt.Color.white);
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/profeession.png"))); // NOI18N
         jLabel9.setText("Profession");
         jLabel9.setToolTipText("");
 
+        prof.setBackground(new java.awt.Color(34, 36, 41));
         prof.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         prof.setForeground(new java.awt.Color(102, 102, 102));
         prof.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -166,10 +186,11 @@ public class UserDetails extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel8.setForeground(java.awt.Color.white);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel8.setText("Email");
 
+        email.setBackground(new java.awt.Color(34, 36, 41));
         email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         email.setForeground(new java.awt.Color(102, 102, 102));
         email.setBorder(null);
@@ -186,12 +207,13 @@ public class UserDetails extends javax.swing.JFrame {
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel10.setForeground(java.awt.Color.white);
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/servise.png"))); // NOI18N
         jLabel10.setText("Why are you using Mail Manager");
         jLabel10.setToolTipText("");
 
+        uses.setBackground(new java.awt.Color(34, 36, 41));
         uses.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         uses.setForeground(new java.awt.Color(102, 102, 102));
         uses.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -215,12 +237,13 @@ public class UserDetails extends javax.swing.JFrame {
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
         jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel11.setForeground(java.awt.Color.white);
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/support.png"))); // NOI18N
         jLabel11.setText("Support us");
         jLabel11.setToolTipText("");
 
+        supp.setBackground(new java.awt.Color(34, 36, 41));
         supp.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         supp.setForeground(new java.awt.Color(102, 102, 102));
         supp.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -244,6 +267,8 @@ public class UserDetails extends javax.swing.JFrame {
 
         photolable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton1.setBackground(new java.awt.Color(20, 20, 25));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Upload Image");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,7 +276,8 @@ public class UserDetails extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(153, 153, 153));
+        jButton2.setBackground(new java.awt.Color(20, 20, 25));
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Generate Report");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -269,31 +295,31 @@ public class UserDetails extends javax.swing.JFrame {
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel12.setForeground(java.awt.Color.white);
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/id.png"))); // NOI18N
-        jLabel12.setText("ID");
+        jLabel12.setText("Help");
         jLabel12.setToolTipText("");
 
-        id.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        id.setForeground(new java.awt.Color(102, 102, 102));
-        id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        id.setText("ID");
-        id.setToolTipText("");
-        id.setBorder(null);
-        id.addMouseListener(new java.awt.event.MouseAdapter() {
+        help.setBackground(new java.awt.Color(34, 36, 41));
+        help.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
+        help.setForeground(new java.awt.Color(255, 255, 255));
+        help.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        help.setToolTipText("");
+        help.setBorder(null);
+        help.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idMouseClicked(evt);
+                helpMouseClicked(evt);
             }
         });
-        id.addActionListener(new java.awt.event.ActionListener() {
+        help.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idActionPerformed(evt);
+                helpActionPerformed(evt);
             }
         });
-        id.addKeyListener(new java.awt.event.KeyAdapter() {
+        help.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                idKeyTyped(evt);
+                helpKeyTyped(evt);
             }
         });
 
@@ -312,52 +338,40 @@ public class UserDetails extends javax.swing.JFrame {
         jSeparator8.setBackground(new java.awt.Color(102, 102, 102));
         jSeparator8.setForeground(new java.awt.Color(102, 102, 102));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/search_20px_1.png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
-
-        change_pass.setText("Change Password");
-        change_pass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                change_passActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(change_pass)
-                .addGap(39, 39, 39)
+                .addGap(158, 158, 158)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addComponent(uses, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(id)
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(photolable, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(112, 112, 112)
-                                .addComponent(jLabel2)
-                                .addGap(20, 20, 20))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(help, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(photolable, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(152, 152, 152))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
+                                .addGap(327, 327, 327)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addContainerGap())))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(prof, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,9 +381,8 @@ public class UserDetails extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(supp, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 352, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,17 +390,13 @@ public class UserDetails extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(prof, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
@@ -395,33 +404,32 @@ public class UserDetails extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jLabel2))
+                                .addGap(23, 23, 23)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(help, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(photolable, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(photolable, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addComponent(supp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
-                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(change_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(uses, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(uses, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 27, Short.MAX_VALUE))
+                .addGap(4, 4, 4)
+                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -435,7 +443,7 @@ public class UserDetails extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -446,7 +454,7 @@ public class UserDetails extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
 
-        UserDetails obj = new UserDetails();
+        DarkUserDetails obj = new DarkUserDetails();
         obj.setVisible(true);
         this.setVisible(false);
 
@@ -499,6 +507,7 @@ public class UserDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_searchhereMouseClicked
 
     private void searchhereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchhereActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_searchhereActionPerformed
 
@@ -588,11 +597,11 @@ public class UserDetails extends javax.swing.JFrame {
         try {
 
             Connection Con_Db = MailManager.Db_MailsManager();
-            String query = "insert into UserReport(ID,Email,Profession,[Use],Support,Photo)values(?,?,?,?,?,?)";
+            String query = "insert into UserReport(Help,Email,Profession,[Use],Support,Photo)values(?,?,?,?,?,?)";
             PreparedStatement ps = Con_Db.prepareStatement(query);
 
             //   String Fetch_Email=user.getText();
-            ps.setString(1, id.getText());
+            ps.setString(1, help.getText());
             ps.setString(2, email.getText());
             ps.setString(3, prof.getText());
             ps.setString(4, uses.getText());
@@ -600,7 +609,7 @@ public class UserDetails extends javax.swing.JFrame {
             ps.setBytes(6, person_image);
             ps.executeUpdate();
 
-            id.setText("");
+            help.setText("");
             email.setText("");
             prof.setText("");
             uses.setText("");
@@ -608,40 +617,28 @@ public class UserDetails extends javax.swing.JFrame {
             photolable.setText("");
 
             JOptionPane.showMessageDialog(null, "Your Report has been generated Successfully ");
-
+            UI ui = new UI();
+            this.setVisible(false);
+            ui.setVisible(true);
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void idMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idMouseClicked
-        if ("ID".equals(id.getText())) {
-            id.setText("");
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_idMouseClicked
-
-    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idActionPerformed
-
-    private void idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idKeyTyped
-
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
 
         try {
 
             Connection Con_Db = MailManager.Db_MailsManager();
-            String query = "select * from UserReport where ID=?";
+            String query = "select * from UserReport where Email=?";
             PreparedStatement ps = Con_Db.prepareStatement(query);
 
             ps.setString(1, searchhere.getText());
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                id.setText(rs.getString("ID"));
+                help.setText(rs.getString("Help"));
                 email.setText(rs.getString("Email"));
                 prof.setText(rs.getString("Profession"));
                 uses.setText(rs.getString("Use"));
@@ -686,6 +683,20 @@ public class UserDetails extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_change_passActionPerformed
 
+    private void helpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_helpKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpKeyTyped
+
+    private void helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpActionPerformed
+
+    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
+        if ("ID".equals(help.getText())) {
+            help.setText("");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_helpMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -703,20 +714,21 @@ public class UserDetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DarkUserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DarkUserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DarkUserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DarkUserDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserDetails().setVisible(true);
+                new DarkUserDetails().setVisible(true);
             }
         });
     }
@@ -724,7 +736,7 @@ public class UserDetails extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton change_pass;
     public javax.swing.JTextField email;
-    private javax.swing.JTextField id;
+    private javax.swing.JTextField help;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

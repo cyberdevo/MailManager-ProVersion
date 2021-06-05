@@ -72,15 +72,12 @@ public class Darkresetpass extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         user = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         button2 = new java.awt.Button();
         eye1 = new javax.swing.JButton();
         eye2 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        ID = new javax.swing.JTextField();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -136,8 +133,9 @@ public class Darkresetpass extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel8.setText("Email");
 
+        email.setBackground(new java.awt.Color(34, 36, 41));
         email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        email.setForeground(new java.awt.Color(102, 102, 102));
+        email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("Email");
         email.setBorder(null);
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -159,7 +157,8 @@ public class Darkresetpass extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/unlock_18px.png"))); // NOI18N
         jLabel6.setText("Enter New Password");
 
-        password.setForeground(new java.awt.Color(102, 102, 102));
+        password.setBackground(new java.awt.Color(34, 36, 41));
+        password.setForeground(new java.awt.Color(255, 255, 255));
         password.setText("Password");
         password.setBorder(null);
         password.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,8 +175,9 @@ public class Darkresetpass extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(102, 102, 102));
         jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
 
+        user.setBackground(new java.awt.Color(34, 36, 41));
         user.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        user.setForeground(new java.awt.Color(102, 102, 102));
+        user.setForeground(new java.awt.Color(255, 255, 255));
         user.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         user.setText("Username");
         user.setToolTipText("");
@@ -197,14 +197,6 @@ public class Darkresetpass extends javax.swing.JFrame {
                 userKeyTyped(evt);
             }
         });
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/id.png"))); // NOI18N
-        jLabel9.setText("ID");
-        jLabel9.setToolTipText("");
 
         jSeparator3.setBackground(new java.awt.Color(102, 102, 102));
         jSeparator3.setForeground(new java.awt.Color(102, 102, 102));
@@ -259,7 +251,7 @@ public class Darkresetpass extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Please Enter Your ID, Username and Email and click on forgot Password");
+        jLabel16.setText("Please Enter Your Username and Email and click on forgot Password");
         jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
@@ -269,31 +261,6 @@ public class Darkresetpass extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel12.setText("Name");
         jLabel12.setToolTipText("");
-
-        ID.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        ID.setForeground(new java.awt.Color(102, 102, 102));
-        ID.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ID.setText("ID");
-        ID.setToolTipText("");
-        ID.setBorder(null);
-        ID.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IDMouseClicked(evt);
-            }
-        });
-        ID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IDActionPerformed(evt);
-            }
-        });
-        ID.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                IDKeyTyped(evt);
-            }
-        });
-
-        jSeparator4.setBackground(new java.awt.Color(102, 102, 102));
-        jSeparator4.setForeground(new java.awt.Color(102, 102, 102));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/g.png"))); // NOI18N
 
@@ -314,54 +281,49 @@ public class Darkresetpass extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(jLabel16))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addComponent(jLabel13)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(124, 124, 124)
+                .addComponent(jLabel16)
+                .addGap(0, 198, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(230, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(193, 193, 193))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(279, 279, 279)))
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eye1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eye2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(192, 192, 192))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabel17)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel18)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel19)
-                            .addGap(306, 306, 306)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(55, 55, 55)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(eye1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(eye2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(122, 122, 122))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(192, 192, 192))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel18)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel19)
+                                .addGap(306, 306, 306))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(314, 314, 314))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,13 +338,7 @@ public class Darkresetpass extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -504,6 +460,7 @@ public class Darkresetpass extends javax.swing.JFrame {
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("X");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -560,13 +517,13 @@ public class Darkresetpass extends javax.swing.JFrame {
   try{
           //String var=s_user.getText();
             Connection Con_Db = MailManager.Db_MailsManager();
-           String query = "update DataSignUp set Passwordd=? where ID=? and Username=? and email=?";
+           String query = "update DataSignUp set Passwordd=? where Username=? and email=?";
             PreparedStatement ps = Con_Db.prepareStatement(query);
 
        ps.setString(1, password.getText());
-        ps.setString(2, ID.getText());
-        ps.setString(3, user.getText());
-        ps.setString(4, email.getText());
+       // ps.setString(2, ID.getText());
+        ps.setString(2, user.getText());
+        ps.setString(3, email.getText());
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Password Updated Sucessfully");
            
@@ -744,32 +701,19 @@ public class Darkresetpass extends javax.swing.JFrame {
  resetColor(button2);        // TODO add your handling code here:
     }//GEN-LAST:event_button2MouseExited
 
-    private void IDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IDMouseClicked
-if ("ID".equals(ID.getText())) {
-            ID.setText("");
-        }          // TODO add your handling code here:
-    }//GEN-LAST:event_IDMouseClicked
-
-    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IDActionPerformed
-
-    private void IDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IDKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IDKeyTyped
-
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+
         // TODO add your handling code here:
          
         try {
         
             Connection Con_Db = MailManager.Db_MailsManager();
-            String query = "select * from DataSignUp where ID=? and Username=? and Email=?";
+            String query = "select * from DataSignUp where Username=? and Email=?";
             PreparedStatement ps = Con_Db.prepareStatement(query);
       
-          ps.setString(1, ID.getText());
-              ps.setString(2, user.getText());
-                  ps.setString(3, email.getText());
+         // ps.setString(1, ID.getText());
+              ps.setString(1, user.getText());
+                  ps.setString(2, email.getText());
             ResultSet rs = ps.executeQuery();
             
             if(rs.next())
@@ -834,7 +778,6 @@ if ("ID".equals(ID.getText())) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ID;
     private java.awt.Button button2;
     public javax.swing.JTextField email;
     private javax.swing.JButton eye1;
@@ -856,14 +799,12 @@ if ("ID".equals(ID.getText())) {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private java.awt.Label label1;
     private javax.swing.JPasswordField password;
     private java.awt.Panel title_panel;

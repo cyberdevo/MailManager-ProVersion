@@ -64,6 +64,7 @@ public class DarkModeUserDataTable extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setSize(new java.awt.Dimension(1035, 625));
 
         jPanel2.setBackground(new java.awt.Color(20, 20, 25));
@@ -101,7 +102,7 @@ public class DarkModeUserDataTable extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Data");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 130, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 130, 40));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -125,7 +126,7 @@ public class DarkModeUserDataTable extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jButton1.setText("Clik here to View User Data");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -381,7 +382,7 @@ public class DarkModeUserDataTable extends javax.swing.JFrame {
         );
 
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jButton2.setText("Enter User ID to Search User Data and Click on Search Button");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -434,7 +435,7 @@ public class DarkModeUserDataTable extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addContainerGap(33, Short.MAX_VALUE))))
+                        .addContainerGap(31, Short.MAX_VALUE))))
         );
 
         pack();

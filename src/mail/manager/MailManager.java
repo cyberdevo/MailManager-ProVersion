@@ -24,15 +24,14 @@ import static mail.manager.StartPage.music;
  * @author Studio 7
  */
 public class MailManager {
-    
-    static Connection db_con=null;
+
+    static Connection db_con = null;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       
+
         /*
         //selenium
          System.setProperty("webdriver.chrome.driver","D:\\Amjad\\softwares\\selenium-java-3.141.59\\chromedriver_win32\\chromedriver.exe");
@@ -47,21 +46,19 @@ public class MailManager {
         
         
         
-        */
-        
+         */
         StartPage obj1 = new StartPage();
         SignIn obj2 = new SignIn();
         obj1.setVisible(true);
+        GuidLines guidline = new GuidLines();
 
-        
-            try {
+        try {
 //             music("D:\\Amjad\\Semester-4\\ACP\\MAIL MANAGER\\mail manager\\fas\\Mucic\\12345.wav");  //Amjad
-                 music("C:\\Users\\Haier\\Documents\\NetBeansProjects\\fas\\Music\\12345.wav");  //hussnain
-                } catch (IOException ex) {
-                    Logger.getLogger(StartPage.class.getName()).log(Level.SEVERE, null, ex);
-                }
-        
-        
+            music("C:\\Users\\Haier\\Documents\\NetBeansProjects\\fas\\Music\\12345.wav");  //hussnain
+        } catch (IOException ex) {
+            Logger.getLogger(StartPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         try {
             for (int i = 1; i <= 100; i++) {
                 Thread.sleep(40);
@@ -70,6 +67,7 @@ public class MailManager {
                 if (i == 100) {
                     obj1.setVisible(false);
                     obj2.setVisible(true);
+                    guidline.setVisible(true);
                 }
             }
         } catch (Exception e) {
@@ -77,23 +75,20 @@ public class MailManager {
         }
     }
 
-    
-    public static Connection Db_MailsManager() throws SQLException{
-        
+    public static Connection Db_MailsManager() throws SQLException {
+
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             //amjad db
-//             String con_MM="jdbc:sqlserver://localhost:1433; databaseName=MailUserData;user=amjad;password=amjad123";
-             //hussnain db
-             String con_MM="jdbc:sqlserver://localhost:1433; databaseName=MailUserData;user=muhammadhusnain;password=101325";
-             db_con = DriverManager.getConnection(con_MM);
-             JOptionPane.showMessageDialog(null, "Connection Esteblished");
+//            String con_MM="jdbc:sqlserver://localhost:1433; databaseName=MailUserData;user=amjad;password=amjad123";
+            //hussnain db
+            String con_MM = "jdbc:sqlserver://localhost:1433; databaseName=MailUserData;user=muhammadhusnain;password=12345";
+            db_con = DriverManager.getConnection(con_MM);
+            JOptionPane.showMessageDialog(null, "Connection Esteblished");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MailManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return db_con;
     }
-    
-     
-    
+
 }

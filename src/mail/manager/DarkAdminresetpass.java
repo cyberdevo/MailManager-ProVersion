@@ -75,13 +75,10 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
         button2 = new java.awt.Button();
         eye1 = new javax.swing.JButton();
         eye2 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
-        ID = new javax.swing.JTextField();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -137,8 +134,9 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/contacts_18px.png"))); // NOI18N
         jLabel8.setText("Email");
 
+        email.setBackground(new java.awt.Color(34, 36, 41));
         email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        email.setForeground(new java.awt.Color(102, 102, 102));
+        email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("Email");
         email.setBorder(null);
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -160,7 +158,8 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/unlock_18px.png"))); // NOI18N
         jLabel6.setText("Enter New Password");
 
-        password.setForeground(new java.awt.Color(102, 102, 102));
+        password.setBackground(new java.awt.Color(34, 36, 41));
+        password.setForeground(new java.awt.Color(255, 255, 255));
         password.setText("Password");
         password.setBorder(null);
         password.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,14 +175,6 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(102, 102, 102));
         jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/id.png"))); // NOI18N
-        jLabel9.setText("ID");
-        jLabel9.setToolTipText("");
 
         button2.setBackground(new java.awt.Color(20, 20, 25));
         button2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
@@ -238,31 +229,6 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
         jLabel16.setText("Please Enter Your ID and Email and click on forgot Password");
         jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ID.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
-        ID.setForeground(new java.awt.Color(102, 102, 102));
-        ID.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ID.setText("ID");
-        ID.setToolTipText("");
-        ID.setBorder(null);
-        ID.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IDMouseClicked(evt);
-            }
-        });
-        ID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IDActionPerformed(evt);
-            }
-        });
-        ID.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                IDKeyTyped(evt);
-            }
-        });
-
-        jSeparator4.setBackground(new java.awt.Color(102, 102, 102));
-        jSeparator4.setForeground(new java.awt.Color(102, 102, 102));
-
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/g.png"))); // NOI18N
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/fb.png"))); // NOI18N
@@ -282,10 +248,6 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(276, 276, 276))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 184, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
@@ -294,9 +256,6 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -307,27 +266,31 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
                             .addComponent(eye1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(134, 134, 134))
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(266, 266, 266)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(266, 266, 266)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(301, 301, 301))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel18)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel19))
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
-                        .addComponent(jLabel12)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(276, 276, 276))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18)
@@ -337,15 +300,9 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -356,18 +313,14 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 89, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(eye2)
-                            .addComponent(eye1))
-                        .addGap(98, 98, 98))))
+                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(eye1)
+                    .addComponent(eye2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 98, Short.MAX_VALUE))
         );
 
         jLabel11.setBackground(new java.awt.Color(0, 153, 153));
@@ -500,7 +453,7 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(title_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -520,12 +473,12 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
   try{
           //String var=s_user.getText();
             Connection Con_Db = MailManager.Db_MailsManager();
-           String query = "update AdminData set Password=? where ID=? and email=?";
+           String query = "update AdminData set Password=? where email=?";
             PreparedStatement ps = Con_Db.prepareStatement(query);
 
        ps.setString(1, password.getText());
-        ps.setString(2, ID.getText());
-        ps.setString(3, email.getText());
+       // ps.setString(2, ID.getText());
+        ps.setString(2, email.getText());
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Password Updated Sucessfully");
            
@@ -688,31 +641,17 @@ public class DarkAdminresetpass extends javax.swing.JFrame {
  resetColor(button2);        // TODO add your handling code here:
     }//GEN-LAST:event_button2MouseExited
 
-    private void IDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IDMouseClicked
-if ("ID".equals(ID.getText())) {
-            ID.setText("");
-        }          // TODO add your handling code here:
-    }//GEN-LAST:event_IDMouseClicked
-
-    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IDActionPerformed
-
-    private void IDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IDKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IDKeyTyped
-
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
         
         try {
         
             Connection Con_Db = MailManager.Db_MailsManager();
-            String query = "select * from AdminData where ID=? and Email=?";
+            String query = "select * from AdminData where Email=?";
             PreparedStatement ps = Con_Db.prepareStatement(query);
       
-          ps.setString(1, ID.getText());
-                  ps.setString(2, email.getText());
+        //  ps.setString(1, ID.getText());
+                  ps.setString(1, email.getText());
             ResultSet rs = ps.executeQuery();
             
             if(rs.next())
@@ -722,7 +661,7 @@ if ("ID".equals(ID.getText())) {
  
             }
             else{
-                JOptionPane.showMessageDialog(null,"Your Privided Information is incorrect Please write correct ID , Username and Email");
+                JOptionPane.showMessageDialog(null,"Your Privided Information is incorrect Please write correct Email");
             
  
             }
@@ -780,7 +719,6 @@ if ("ID".equals(ID.getText())) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ID;
     private java.awt.Button button2;
     public javax.swing.JTextField email;
     private javax.swing.JButton eye1;
@@ -801,13 +739,11 @@ if ("ID".equals(ID.getText())) {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator4;
     private java.awt.Label label1;
     private javax.swing.JPasswordField password;
     private java.awt.Panel title_panel;

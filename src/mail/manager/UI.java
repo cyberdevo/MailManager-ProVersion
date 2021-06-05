@@ -32,6 +32,10 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import java.awt.Image;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -184,6 +188,8 @@ public class UI extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         jLabel19 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -244,6 +250,9 @@ public class UI extends javax.swing.JFrame {
 
         btn_2.setBackground(new java.awt.Color(23, 35, 51));
         btn_2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_2MouseClicked(evt);
+            }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_2MouseReleased(evt);
             }
@@ -533,9 +542,7 @@ public class UI extends javax.swing.JFrame {
                         .addGap(20, 20, 20))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(jLabel21)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel21)
                             .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -543,7 +550,7 @@ public class UI extends javax.swing.JFrame {
                                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel18)
                                     .addComponent(supp, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(330, 330, 330)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(104, 104, 104))))
         );
@@ -1175,7 +1182,6 @@ public class UI extends javax.swing.JFrame {
         side_pane.add(btn_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 120, -1));
 
         getContentPane().add(side_pane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 120, 580));
-        side_pane.getAccessibleContext().setAccessibleParent(jPanel9);
 
         jPanel2.setBackground(new java.awt.Color(71, 120, 197));
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1208,7 +1214,7 @@ public class UI extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(329, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(search_field, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1224,7 +1230,7 @@ public class UI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 930, 50));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 610, 50));
         jPanel2.getAccessibleContext().setAccessibleParent(jPanel9);
 
         jPanel3.setBackground(new java.awt.Color(71, 120, 197));
@@ -1272,10 +1278,10 @@ public class UI extends javax.swing.JFrame {
                     .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 52, Short.MAX_VALUE))
+                .addGap(0, 32, Short.MAX_VALUE))
         );
 
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 85, 320, 130));
+        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 105, 320, 110));
 
         btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/icons8_Exit_25px.png"))); // NOI18N
         btn_exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1285,12 +1291,12 @@ public class UI extends javax.swing.JFrame {
         });
         jPanel4.add(btn_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 24, -1, 46));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/imge_1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mail/manager/button/12.png"))); // NOI18N
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Amos");
+        jLabel12.setText("Husnain");
         jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 52)); // NOI18N
@@ -1332,19 +1338,18 @@ public class UI extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(date_showing, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(date_showing, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
                         .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(75, 75, 75))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1440,11 +1445,8 @@ public class UI extends javax.swing.JFrame {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(manualrecp)
                             .addComponent(jSeparator7)))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(subjectMail, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(subjectMail)
+                    .addComponent(jSeparator9))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -1621,6 +1623,37 @@ public class UI extends javax.swing.JFrame {
         getContentPane().add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         jPanel19.getAccessibleContext().setAccessibleParent(jPanel9);
 
+        jPanel20.setBackground(new java.awt.Color(71, 120, 197));
+
+        jLabel34.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("<==");
+        jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel34MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(260, Short.MAX_VALUE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 320, 50));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -1664,8 +1697,9 @@ public class UI extends javax.swing.JFrame {
         setColor(btn_4);
         ind_4.setOpaque(true);
         resetColor(new JPanel[]{btn_2, btn_3, btn_1}, new JPanel[]{ind_2, ind_3, ind_1});
-        UserDetails user = new UserDetails();
+        DarkUserDetails user = new DarkUserDetails();
         user.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_4MousePressed
 
     private void btn_2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_2MouseReleased
@@ -1708,41 +1742,68 @@ public class UI extends javax.swing.JFrame {
         String[] schemes = {"http", "https"}; // DEFAULT schemes = "http", "https", "ftp"
         UrlValidator urlValidator = new UrlValidator(schemes);
         if (urlValidator.isValid(givenURL)) {
-//            MailLoader obj = new MailLoader();
+            try {
+                //            MailLoader obj = new MailLoader();
 //            obj.setVisible(true);
-            loader load = new loader();
-            load.setVisible(true);
-//          JOptionPane.showMessageDialog(null, "URL is valid");
-//            EmailCrawlar test = new EmailCrawlar();
-//            emaillist = test.emailScrapper(givenURL);
-            emaillist.add("husnainsarwar404@gmail.com");
-            emaillist.add("bcsm-f19-382@superior.edu.pk");
-            String ans = null;
-            do {
-                 ans = JOptionPane.showInputDialog("Do you want to send message to more than one Recipiant ? Yes || No");
-                if ("Yes".equals(ans)) {
+                URL url = new URL(givenURL);
+                URLConnection connection;
+                try {
+                    connection = url.openConnection();
+                    connection.connect();
 
-                    String recp = JOptionPane.showInputDialog(f, "Enter Recipiants ! ");
-                    manualrecp.setText(recp);
-                    emaillist.add(recp);
-                    System.out.println("sdf");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Msdf");
+                } catch (IOException ex) {
+                    Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "Internet Connection Issue Try Again !!");
                 }
-       
-                   if("No".equals(ans)){
-                       break;
-                   } 
-            } while (true);
+                loader load = new loader();
+                load.setVisible(true);
+                JOptionPane.showMessageDialog(null, "URL is valid");
+                EmailCrawlar test = new EmailCrawlar();
+                emaillist = test.emailScrapper(givenURL);
+                emaillist.add("husnainsarwar404@gmail.com");
+                emaillist.add("bcsm-f19-382@superior.edu.pk");
+                emaillist.add("bcsm-f19-383@superior.edu.pk");
+                emaillist.add("jawad@superior.edu.pk");
+                String ans = null;
+                //Start process of mails sending
+                do {
+                    ans = JOptionPane.showInputDialog("Do you want to send message to more than one Recipiant ? Yes || No");
+                    if ("Yes".equals(ans)) {
+
+                        String recp = JOptionPane.showInputDialog(f, "Enter Recipiants ! ");
+                        manualrecp.setText(recp);
+                        emaillist.add(recp);
+                        System.out.println(emaillist.add(recp));
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Please Wait for Scrapped Emails");
+                    }
+
+                    if ("No".equals(ans)) {
+                        break;
+                    }
+                } while (true);
 
 //          System.out.println("Contents of list ::" + emaillist);
-            String[] myArray = new String[emaillist.size()];
-            emaillist.toArray(myArray);
-            DefaultTableModel tblModel = (DefaultTableModel) mail_list_table.getModel();
-            for (int i = 0; i < myArray.length; i++) {
+                String[] myArray = new String[emaillist.size()];
+                emaillist.toArray(myArray);
+                DefaultTableModel tblModel = (DefaultTableModel) mail_list_table.getModel();
+                for (int i = 0; i < myArray.length; i++) {
 //                System.out.println("Element at the index " + i + " is ::" + myArray[i]);
-                String[] arr = {myArray[i]};
-                tblModel.addRow(arr);
+                    String[] arr = {myArray[i]};
+                    tblModel.addRow(arr);
+                }
+                Connection Con_Db = MailManager.Db_MailsManager();
+                for (String selection : emaillist) {
+                    String scrapeTable = "insert into ScrapedEmails(ScrapedEmail)values(?)";
+                    PreparedStatement ps_1 = Con_Db.prepareStatement(scrapeTable);
+//                    JOptionPane.showMessageDialog(null, selection);
+                    ps_1.setString(1, selection);
+                    ps_1.executeUpdate();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (MalformedURLException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } else {
@@ -1795,9 +1856,42 @@ public class UI extends javax.swing.JFrame {
 
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+
         try {
             // TODO add your handling code here:
             MailsSending.sendMail(selected_email, subjectMail.getText(), textMailArea.getText(), myAcount.getText());
+
+            ///data saving into db
+            try {
+
+                Connection Con_Db = MailManager.Db_MailsManager();
+                String query = "insert into Messages(EmailFrom,EmailTo,SubjectMail,Message)values(?,?,?,?)";
+
+                PreparedStatement ps = Con_Db.prepareStatement(query);
+
+                //   String Fetch_Email=user.getText();
+                ps.setString(1, myAcount.getText());
+                ps.setString(2, manualrecp.getText());
+                ps.setString(3, subjectMail.getText());
+                ps.setString(4, textMailArea.getText());
+
+//                 for (int i = 0; i < myArray.length; i++) {
+////                    ps.setArray(2,selected_email.toArray(myArray));
+////                   
+//////                }
+//                
+                ps.executeUpdate();
+
+                myAcount.setText("");
+                manualrecp.setText("");
+                subjectMail.setText("");
+                textMailArea.setText("");
+                JOptionPane.showMessageDialog(null, "");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         } catch (MessagingException ex) {
             Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2028,7 +2122,7 @@ public class UI extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
 
-        UserDetails obj = new UserDetails();
+        DarkUserDetails obj = new DarkUserDetails();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
@@ -2155,10 +2249,24 @@ public class UI extends javax.swing.JFrame {
 
     private void btn_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_3MouseClicked
         // TODO add your handling code here:
-        UserDetails obj = new UserDetails();
+        DarkUserDetails obj = new DarkUserDetails();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_3MouseClicked
+
+    private void btn_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_2MouseClicked
+        // TODO add your handling code here:
+        AdminSignIn obj = new AdminSignIn();
+        this.setVisible(false);
+        obj.setVisible(true);
+    }//GEN-LAST:event_btn_2MouseClicked
+
+    private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
+        // TODO add your handling code here:
+        DarkUserDetails user = new DarkUserDetails();
+        user.setVisible(true);
+       this.setVisible(false);
+    }//GEN-LAST:event_jLabel34MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2263,6 +2371,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -2281,6 +2390,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

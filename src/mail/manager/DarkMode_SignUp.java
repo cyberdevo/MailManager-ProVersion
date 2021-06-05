@@ -138,7 +138,7 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
 
         email.setBackground(new java.awt.Color(34, 36, 41));
         email.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        email.setForeground(new java.awt.Color(153, 153, 153));
+        email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("Email");
         email.setBorder(null);
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -162,7 +162,7 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
 
         password.setBackground(new java.awt.Color(34, 36, 41));
         password.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        password.setForeground(new java.awt.Color(153, 153, 153));
+        password.setForeground(new java.awt.Color(255, 255, 255));
         password.setText("Password");
         password.setBorder(null);
         password.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,7 +181,7 @@ public class DarkMode_SignUp extends javax.swing.JFrame {
 
         user.setBackground(new java.awt.Color(34, 36, 41));
         user.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        user.setForeground(new java.awt.Color(153, 153, 153));
+        user.setForeground(new java.awt.Color(255, 255, 255));
         user.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         user.setText("Username");
         user.setToolTipText("");

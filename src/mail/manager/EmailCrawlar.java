@@ -32,14 +32,15 @@ public class EmailCrawlar {
 
         {
             try {
-   
+
                 URL mainURL = new URL(givenURL);
                 authority = mainURL.getAuthority();
             } catch (MalformedURLException ex) {
                 Logger.getLogger(EmailCrawlar.class.getName()).log(Level.SEVERE, null, ex);
+//                System.out.println("Conntion Time out");
             }
         }
-   
+
         String regex = "[a-zA-Z0-9\\\\.\\\\-\\\\_]+@[a-zA-Z]+[\\\\.]{1}[a-zA-Z]{2,4}";
         Pattern pattern = Pattern.compile(regex);
 
@@ -78,6 +79,7 @@ public class EmailCrawlar {
 
             } catch (IOException ex) {
                 Logger.getLogger(EmailCrawlar.class.getName()).log(Level.SEVERE, null, ex);
+//                System.out.println("Conntion Time out");
             }
 
         }

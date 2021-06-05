@@ -92,7 +92,7 @@ public class SignIn extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 153));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel5.setForeground(new java.awt.Color(23, 35, 51));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Or");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -394,9 +394,9 @@ public class SignIn extends javax.swing.JFrame {
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel9)
-                        .addGap(25, 25, 25)
+                        .addGap(26, 26, 26)
                         .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(73, Short.MAX_VALUE))
+                        .addContainerGap(72, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -430,7 +430,7 @@ public class SignIn extends javax.swing.JFrame {
         title_panel2Layout.setHorizontalGroup(
             title_panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, title_panel2Layout.createSequentialGroup()
-                .addGap(0, 987, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         title_panel2Layout.setVerticalGroup(
@@ -442,10 +442,8 @@ public class SignIn extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(title_panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(title_panel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -502,24 +500,23 @@ public class SignIn extends javax.swing.JFrame {
             String user = user_signIn.getText();
             String pass_field = pass_signIn.getText();
             Connection con = MailManager.Db_MailsManager();
-            String query = "SELECT * FROM MailUserData where (email=? AND password =?)";
+            String query = "SELECT * FROM DataSignUp where (email=? AND passwordd =?)";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, user);
             ps.setString(2, pass_field);
-
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                String pass = rs.getString("password");
+                String pass = rs.getString("passwordd");
 //                JOptionPane.showMessageDialog(null, pass_field);
 //                JOptionPane.showMessageDialog(null, pass);
                 JOptionPane.showMessageDialog(null, "Welcome ! You are autherized User");
-                
+
 //                load.setVisible(true);
                 showloader();
 
             } else {
-                JOptionPane.showMessageDialog(null, "Invalide");
+                JOptionPane.showMessageDialog(null, "Invalid Username and Password ");
             }
 
         } catch (SQLException ex) {
@@ -530,19 +527,19 @@ public class SignIn extends javax.swing.JFrame {
     }//GEN-LAST:event_button2ActionPerformed
     public void showloader() {
 
-        try {
-            for (int i = 0; i <= 100; i++) {
-                Thread.sleep(70);
-                if (i == 100) {
-                    this.setVisible(false);
-                    load.setVisible(false);
-                    ui.setVisible(true);
-                }
-            }
+//        try {
+//            for (int i = 0; i <= 100; i++) {
+//                Thread.sleep(70);
+//                if (i == 100) {
+////                    load.setVisible(false);
+//                }
+//            }
+            this.setVisible(false);
+            ui.setVisible(true);
 
-        } catch (InterruptedException ex) {
-            Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        } catch (InterruptedException ex) {
+//            Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         // TODO add your handling code here:
