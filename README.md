@@ -57,9 +57,8 @@ Follwing are the steps that are releted to works
 
 
 
-
-
-
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 
